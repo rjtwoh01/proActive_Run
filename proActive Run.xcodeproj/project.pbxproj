@@ -10,6 +10,7 @@
 		350173E71F190CC4003D6370 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350173E61F190CC4003D6370 /* NewRunViewController.swift */; };
 		350830051F1A9512008F02D6 /* vermin_vibes_slant in Resources */ = {isa = PBXBuildFile; fileRef = 350830041F1A9512008F02D6 /* vermin_vibes_slant */; };
 		350830071F1A96DE008F02D6 /* Richardson_Brand_Accelerator in Resources */ = {isa = PBXBuildFile; fileRef = 350830061F1A96DE008F02D6 /* Richardson_Brand_Accelerator */; };
+		3508300B1F1BAF00008F02D6 /* RunningPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3508300A1F1BAF00008F02D6 /* RunningPlan.swift */; };
 		35E807CA1F184BA0007EC587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E807C91F184BA0007EC587 /* AppDelegate.swift */; };
 		35E807CF1F184BA0007EC587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E807CD1F184BA0007EC587 /* Main.storyboard */; };
 		35E807D11F184BA0007EC587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E807D01F184BA0007EC587 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		350173E61F190CC4003D6370 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		350830041F1A9512008F02D6 /* vermin_vibes_slant */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vermin_vibes_slant; sourceTree = "<group>"; };
 		350830061F1A96DE008F02D6 /* Richardson_Brand_Accelerator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Richardson_Brand_Accelerator; sourceTree = "<group>"; };
+		3508300A1F1BAF00008F02D6 /* RunningPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningPlan.swift; sourceTree = "<group>"; };
 		35E807C61F184BA0007EC587 /* proActive Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proActive Run.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E807C91F184BA0007EC587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E807CE1F184BA0007EC587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				35E807C91F184BA0007EC587 /* AppDelegate.swift */,
 				35E807CD1F184BA0007EC587 /* Main.storyboard */,
+				3508300A1F1BAF00008F02D6 /* RunningPlan.swift */,
 				350173E61F190CC4003D6370 /* NewRunViewController.swift */,
 				35E807F71F184D68007EC587 /* HomeViewController.swift */,
 				35E807F91F190156007EC587 /* Run.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				350173E71F190CC4003D6370 /* NewRunViewController.swift in Sources */,
 				35E807CA1F184BA0007EC587 /* AppDelegate.swift in Sources */,
+				3508300B1F1BAF00008F02D6 /* RunningPlan.swift in Sources */,
 				35E807FA1F190156007EC587 /* Run.swift in Sources */,
 				35E807F81F184D68007EC587 /* HomeViewController.swift in Sources */,
 			);
