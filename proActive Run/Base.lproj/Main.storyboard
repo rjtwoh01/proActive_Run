@@ -30,8 +30,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXZ-xJ-AC9">
-                                <rect key="frame" x="24" y="335" width="124" height="34"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <rect key="frame" x="20" y="335" width="137" height="36"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="View Past Runs">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -75,7 +75,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="V7q-57-2n6" secondAttribute="trailing" constant="37" id="VWF-Km-Wdn"/>
                             <constraint firstItem="bni-5r-1Rh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="bDb-cK-hV6"/>
                             <constraint firstItem="CXZ-xJ-AC9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="315" id="eyT-Xn-xhz"/>
-                            <constraint firstItem="CXZ-xJ-AC9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="iEe-IV-kRG"/>
+                            <constraint firstItem="CXZ-xJ-AC9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="iEe-IV-kRG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mNU-wl-kWu" secondAttribute="trailing" constant="30" id="pWF-cB-VwG"/>
                             <constraint firstItem="Cai-WL-hkk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xO6-c9-oRM"/>
                             <constraint firstItem="mNU-wl-kWu" firstAttribute="top" secondItem="V7q-57-2n6" secondAttribute="bottom" constant="20" id="zQ8-xp-hy7"/>
