@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="802" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--New Run View Controller-->
         <scene sceneID="E7H-16-QPB">
             <objects>
-                <viewController id="KLQ-Qt-vwC" sceneMemberID="viewController">
+                <viewController id="KLQ-Qt-vwC" customClass="NewRunViewController" customModule="proActive_Run" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6tX-wa-P5T"/>
                         <viewControllerLayoutGuide type="bottom" id="YP4-cW-Hd2"/>
@@ -146,14 +146,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lCd-9L-zKY">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovj-me-Zte">
-                                                <rect key="frame" x="0.0" y="0.0" width="36" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovj-me-Zte">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMm-py-uYQ">
-                                                <rect key="frame" x="44" y="0.0" width="315" height="30"/>
+                                                <rect key="frame" x="75" y="0.0" width="284" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -245,6 +245,14 @@
                             <constraint firstAttribute="trailing" secondItem="RCO-0x-Qbd" secondAttribute="trailing" constant="8" id="cbb-gp-6r3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateCreatedLabel" destination="VUK-lD-5wY" id="2DU-w9-FEc"/>
+                        <outlet property="dateField" destination="COV-UA-wda" id="YCY-EA-EWd"/>
+                        <outlet property="distanceField" destination="tMm-py-uYQ" id="wLX-qg-824"/>
+                        <outlet property="intendedDistanceField" destination="lvH-Ev-SOJ" id="IOQ-bX-uBT"/>
+                        <outlet property="speedField" destination="hpA-Q1-Cxb" id="kyw-ok-etw"/>
+                        <outlet property="timeField" destination="7bZ-GY-kb2" id="Syy-1x-zVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHi-dO-mDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,5 +9,10 @@
 import UIKit
 
 class NewRunViewController: UIViewController {
-    
+    @IBOutlet var distanceField: UITextField!
+    @IBOutlet var intendedDistanceField: UITextField!
+    @IBOutlet var timeField: UITextField!
+    @IBOutlet var speedField: UITextField!
+    @IBOutlet var dateField: UITextField!
+    @IBOutlet var dateCreatedLabel: UILabel!
 }
