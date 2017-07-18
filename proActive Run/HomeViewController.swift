@@ -54,6 +54,9 @@ class HomeViewController : UIViewController {
         case "runList"?:
             let runListController = segue.destination as! RunViewController
             runListController.runCollection = runCollection
+        case "newPlan"?:
+            let newPlanController = segue.destination as! NewPlanViewController
+            newPlanController.planCollection = planCollection
         default:
             preconditionFailure("Unexpected segue identifier")
         }

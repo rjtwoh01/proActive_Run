@@ -17,6 +17,8 @@
 		352EC3D81F1E84FD0026F92A /* EditRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EC3D71F1E84FD0026F92A /* EditRunViewController.swift */; };
 		352EC3DA1F1E8BFC0026F92A /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EC3D91F1E8BFC0026F92A /* Plan.swift */; };
 		352EC3DC1F1E8EEB0026F92A /* PlanCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352EC3DB1F1E8EEB0026F92A /* PlanCollection.swift */; };
+		35C3DBA81F1E93C50055F581 /* NewPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3DBA71F1E93C50055F581 /* NewPlanViewController.swift */; };
+		35C3DBAA1F1E93D20055F581 /* ExistingPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3DBA91F1E93D20055F581 /* ExistingPlanViewController.swift */; };
 		35E807CA1F184BA0007EC587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E807C91F184BA0007EC587 /* AppDelegate.swift */; };
 		35E807CF1F184BA0007EC587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E807CD1F184BA0007EC587 /* Main.storyboard */; };
 		35E807D11F184BA0007EC587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E807D01F184BA0007EC587 /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		352EC3D71F1E84FD0026F92A /* EditRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditRunViewController.swift; sourceTree = "<group>"; };
 		352EC3D91F1E8BFC0026F92A /* Plan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		352EC3DB1F1E8EEB0026F92A /* PlanCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanCollection.swift; sourceTree = "<group>"; };
+		35C3DBA71F1E93C50055F581 /* NewPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlanViewController.swift; sourceTree = "<group>"; };
+		35C3DBA91F1E93D20055F581 /* ExistingPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingPlanViewController.swift; sourceTree = "<group>"; };
 		35E807C61F184BA0007EC587 /* proActive Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "proActive Run.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E807C91F184BA0007EC587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E807CE1F184BA0007EC587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			children = (
 				35E807C91F184BA0007EC587 /* AppDelegate.swift */,
 				35E807CD1F184BA0007EC587 /* Main.storyboard */,
+				35C3DBA71F1E93C50055F581 /* NewPlanViewController.swift */,
+				35C3DBA91F1E93D20055F581 /* ExistingPlanViewController.swift */,
 				352EC3D91F1E8BFC0026F92A /* Plan.swift */,
 				352EC3DB1F1E8EEB0026F92A /* PlanCollection.swift */,
 				352EC3D71F1E84FD0026F92A /* EditRunViewController.swift */,
@@ -299,6 +305,7 @@
 			files = (
 				350173E71F190CC4003D6370 /* NewRunViewController.swift in Sources */,
 				35E807CA1F184BA0007EC587 /* AppDelegate.swift in Sources */,
+				35C3DBA81F1E93C50055F581 /* NewPlanViewController.swift in Sources */,
 				3508300B1F1BAF00008F02D6 /* RunningPlan.swift in Sources */,
 				3508300F1F1C0425008F02D6 /* RunCell.swift in Sources */,
 				352EC3DA1F1E8BFC0026F92A /* Plan.swift in Sources */,
@@ -307,6 +314,7 @@
 				35E807F81F184D68007EC587 /* HomeViewController.swift in Sources */,
 				352EC3D81F1E84FD0026F92A /* EditRunViewController.swift in Sources */,
 				350830111F1C3786008F02D6 /* RunViewController.swift in Sources */,
+				35C3DBAA1F1E93D20055F581 /* ExistingPlanViewController.swift in Sources */,
 				3508300D1F1C012D008F02D6 /* RunCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
