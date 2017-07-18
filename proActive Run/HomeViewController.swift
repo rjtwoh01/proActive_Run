@@ -17,15 +17,19 @@ class HomeViewController : UIViewController {
     //@IBOutlet var ViewPastRuns: UIButton!
     @IBOutlet var ViewPastRuns: UIButton!
     @IBOutlet var DateLabel: UILabel!
-    @IBOutlet var TitleLabel: UILabel!
+    //@IBOutlet var TitleLabel: UILabel!
+    
+    var runCollection: RunCollection!
     
     override func viewDidLoad() {
         generateBackground()
         
         let todaysDate = Date()
         DateLabel.text = dateFormatter.string(from: todaysDate)
-        let title = "proActive Run"
-        TitleLabel.text = "\(title)"
+        //let title = "proActive Run"
+        //TitleLabel.text = "\(title)"
+        
+        navigationItem.title = "proActive Run"
     }
     
     func generateBackground() {
@@ -39,6 +43,16 @@ class HomeViewController : UIViewController {
         UIGraphicsEndImageContext()
         
         self.view.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "newRun"?:
+            let newRunController = segue.destination as! NewRunViewController
+            newRunController.runCollect = runCollection
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
     }
     
     let dateFormatter: DateFormatter = {

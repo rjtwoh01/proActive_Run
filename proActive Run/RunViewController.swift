@@ -9,5 +9,8 @@
 import UIKit
 
 class RunViewController: UITableViewController {
+    var runCollection: RunCollection!
+    //images?
+    
     
 }
