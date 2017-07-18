@@ -16,4 +16,24 @@ class PlanCollection {
         allPlans.append(newPlan)
         return newPlan
     }
+    
+    func moveRun(from fromIndex: Int, to toIndex: Int) {
+        if fromIndex == toIndex {
+            return
+        }
+        
+        let movedPlan = allPlans[fromIndex]
+        allPlans.remove(at: fromIndex)
+        allPlans.insert(movedPlan, at: toIndex)
+    }
+    
+    func addPlanAtLocation(newPlan: Plan, indexAt: Int) {
+        allPlans.insert(newPlan, at: indexAt)
+    }
+    
+    func removePlan(_ plan: Plan) {
+        if let index = allPlans.index(of: plan) {
+            allPlans.remove(at: index)
+        }
+    }
 }

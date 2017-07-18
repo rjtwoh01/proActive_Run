@@ -20,6 +20,7 @@ class HomeViewController : UIViewController {
     //@IBOutlet var TitleLabel: UILabel!
     
     var runCollection: RunCollection!
+    var planCollection: PlanCollection!
     
     override func viewDidLoad() {
         generateBackground()

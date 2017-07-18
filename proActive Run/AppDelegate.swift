@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let runCollection = RunCollection()
+    let planCollection = PlanCollection()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = window!.rootViewController as! UINavigationController
         let homeController = navController.topViewController as! HomeViewController
         homeController.runCollection = runCollection
+        homeController.planCollection = planCollection
         
         return true
     }
