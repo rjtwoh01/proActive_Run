@@ -106,6 +106,20 @@ class RunViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "editRun"?:
+                if let row = tableView.indexPathForSelectedRow?.row {
+                let run = runCollection.allRuns[row]
+                let editRunViewController = segue.destination as! EditRunViewController
+                editRunViewController.run = run
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+
+    
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
