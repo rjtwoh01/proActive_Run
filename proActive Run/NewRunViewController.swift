@@ -26,7 +26,7 @@ class NewRunViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        navigationItem.title = "Add New Run"
         //Will need a way to check if its a new or existing run
         //Maybe I will have to go with two views
         /*distanceField.text = numberFormatter.string(from: NSNumber(value: run.distance))

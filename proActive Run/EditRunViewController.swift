@@ -26,7 +26,7 @@ class EditRunViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        navigationItem.title = "Edit Run"
         distanceField.text = numberFormatter.string(from: NSNumber(value: run.distance))
         intendedDistanceField.text = numberFormatter.string(from: NSNumber(value: run.intendedDistance))
         timeField.text = numberFormatter.string(from: NSNumber(value: run.time))

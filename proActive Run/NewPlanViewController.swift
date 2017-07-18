@@ -13,10 +13,11 @@ class NewPlanViewController: UIViewController {
     @IBOutlet var planName: UITextField!
     @IBOutlet var raceDistance: UITextField!
     @IBOutlet var dateCreatedLabel: UILabel!
+    @IBOutlet var addItem: UIBarButtonItem!
     
     var plan: Plan! {
         didSet {
-            navigationItem.title = "Add New Plans"
+            navigationItem.title = "Add New Plan"
         }
     }
     
@@ -24,7 +25,8 @@ class NewPlanViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        navigationItem.title = "Add New Plan"
+        navigationItem.rightBarButtonItem = addItem
         let date = Date()
         dateCreatedLabel.text = dateFormatter.string(from: date)
     }
@@ -39,6 +41,33 @@ class NewPlanViewController: UIViewController {
     func texFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func addNewPlan() {
+        planCollection.createPlan(planName: "", raceDistance: 0)
+        plan = planCollection.allPlans.last
+        
+        plan.planName = planName.text ?? ""
+        if let raceDistanceText = raceDistance.text,
+            let raceDistanceNumber = numberFormatter.number(from: raceDistanceText) {
+            plan.raceDistance = raceDistanceNumber.floatValue
+        } else {
+            plan.raceDistance = 0
+        }
+        
+        plan.resetPlan() //plan is generated with 0 race distance, have to fix that
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "newPlanAdded"?:
+            addNewPlan()
+            let viewPlanController = segue.destination as! ExistingPlanViewController
+            viewPlanController.plan = plan
+            break
+        default:
+            preconditionFailure("Unexpected Segue Identifier")
+        }
     }
     
     let numberFormatter: NumberFormatter = {

@@ -11,7 +11,7 @@ import UIKit
 class Plan: NSObject {
     var planName: String
     var raceDistance: Float
-    var planDetails = [[Float]]() //A 2D array, weeks by days
+    var planDetails = [Float]() //A 2D array, weeks by days
     //This array will be used to set the distance that the runner goes that day
     
     init(planName: String, raceDistance: Float) {
@@ -22,28 +22,48 @@ class Plan: NSObject {
         
     }
     
-    func generatePlan() -> [[Float]] {
-        var plan = [[Float]]()
-        for i in 0...3 {
-            for j in 0...6 {
-                if j == 0 {
-                    plan[i][j] = 0 //0 means "rest"
-                }
-                else if j == 1 {
-                    plan[i][j] = raceDistance / 4
-                }
-                else if j == 2 {
-                    plan[i][j] = raceDistance / 3
-                }
-                else if j == 3 || j == 4 || j == 6 {
-                    plan[i][j] = raceDistance / 2
-                }
-                else if j == 5 {
-                    plan[i][j] = raceDistance - 1
-                }
-            }
+    func generatePlan() -> [Float] {
+        var plan = [Float]()
+        
+        plan.append(0)
+        if raceDistance > 0 {
+            plan.append(raceDistance / 4)
+            plan.append(raceDistance / 3)
+            plan.append(raceDistance / 2)
+            plan.append(raceDistance / 2)
+            plan.append(raceDistance - 1)
+            plan.append(raceDistance / 2)
+        }
+        else {
+            plan.append(0)
+            plan.append(0)
+            plan.append(0)
+            plan.append(0)
+            plan.append(0)
+            plan.append(0)
         }
         
         return plan
+    }
+    
+    func resetPlan() {
+        planDetails.removeAll()
+        planDetails.append(0)
+        if raceDistance > 0 {
+            planDetails.append(raceDistance / 4)
+            planDetails.append(raceDistance / 3)
+            planDetails.append(raceDistance / 2)
+            planDetails.append(raceDistance / 2)
+            planDetails.append(raceDistance - 1)
+            planDetails.append(raceDistance / 2)
+        }
+        else {
+            planDetails.append(0)
+            planDetails.append(0)
+            planDetails.append(0)
+            planDetails.append(0)
+            planDetails.append(0)
+        }
+
     }
 }
