@@ -90,6 +90,11 @@ class NewRunViewController: UIViewController {
         }
     }
     
+    func texFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal

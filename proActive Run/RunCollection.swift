@@ -34,7 +34,9 @@ class RunCollection {
         allRuns.insert(newRun, at: indexAt)
     }
     
-    func removeRun(indexFrom: Int) {
-        allRuns.remove(at: indexFrom)
+    func removeRun(_ run: Run) {
+        if let index = allRuns.index(of: run) {
+            allRuns.remove(at: index)
+        }
     }
 }

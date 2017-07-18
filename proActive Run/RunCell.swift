@@ -9,5 +9,15 @@
 import UIKit
 
 class RunCell: UITableViewCell {
-    //ToDo
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        distanceLabel.adjustsFontForContentSizeCategory = true
+        timeLabel.adjustsFontForContentSizeCategory = true
+        dateLabel.adjustsFontForContentSizeCategory = true
+    }
 }

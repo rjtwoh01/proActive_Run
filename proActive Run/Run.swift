@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Run/*:*/ /*NSObject*//*, NSCoding*/ {
+class Run: NSObject/*, NSCoding*/ {
     var distance: Float
     var time: Float
     var date: Date
