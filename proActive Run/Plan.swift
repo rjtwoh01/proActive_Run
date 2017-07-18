@@ -17,9 +17,9 @@ class Plan: NSObject {
     init(planName: String, raceDistance: Float) {
         self.planName = planName
         self.raceDistance = raceDistance
+        super.init()
         self.planDetails = generatePlan()
         
-        super.init()
     }
     
     func generatePlan() -> [[Float]] {
