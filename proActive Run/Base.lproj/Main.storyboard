@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXZ-xJ-AC9">
-                                <rect key="frame" x="20" y="339" width="137" height="36"/>
+                                <rect key="frame" x="20" y="189" width="137" height="36"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="View Past Runs">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -77,7 +77,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="yGX-q6-WXd" secondAttribute="trailing" constant="25" id="K9E-ZT-TyA"/>
                             <constraint firstItem="mNU-wl-kWu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Nz5-5N-pkS"/>
                             <constraint firstItem="bni-5r-1Rh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="bDb-cK-hV6"/>
-                            <constraint firstItem="CXZ-xJ-AC9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="275" id="eyT-Xn-xhz"/>
+                            <constraint firstItem="CXZ-xJ-AC9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="125" id="eyT-Xn-xhz"/>
                             <constraint firstItem="CXZ-xJ-AC9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="iEe-IV-kRG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mNU-wl-kWu" secondAttribute="trailing" constant="30" id="pWF-cB-VwG"/>
                             <constraint firstItem="Cai-WL-hkk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xO6-c9-oRM"/>
@@ -109,7 +109,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1VN-FU-kgG" id="GGG-3d-Gwa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTf-Hb-0wW">
@@ -359,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-hc-DsC">
-                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <rect key="frame" x="8" y="72" width="359" height="543"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IHG-9Q-t0K">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
@@ -473,10 +473,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-6u-2SY">
-                                        <rect key="frame" x="0.0" y="186" width="359" height="401"/>
+                                        <rect key="frame" x="0.0" y="186" width="359" height="357"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Press  back button to return and save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-iN-wWw">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="401"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="357"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
