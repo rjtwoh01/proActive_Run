@@ -8,13 +8,14 @@
 
 import UIKit
 
-class NewRunViewController: UIViewController {
+class NewRunViewController: UIViewController, UINavigationControllerDelegate, UITextFieldDelegate  {
     @IBOutlet var distanceField: UITextField!
     @IBOutlet var intendedDistanceField: UITextField!
     @IBOutlet var timeField: UITextField!
     @IBOutlet var speedField: UITextField!
     @IBOutlet var dateField: UITextField!
     @IBOutlet var dateCreatedLabel: UILabel!
+    @IBOutlet var addItem: UIBarButtonItem!
     
     var run: Run! {
         didSet {
@@ -27,6 +28,7 @@ class NewRunViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = "Add New Run"
+        navigationItem.rightBarButtonItem = addItem
         //Will need a way to check if its a new or existing run
         //Maybe I will have to go with two views
         /*distanceField.text = numberFormatter.string(from: NSNumber(value: run.distance))
@@ -36,14 +38,15 @@ class NewRunViewController: UIViewController {
         */
         let date = Date()
         dateField.text = dateFormatter.string(from: date)
-        dateCreatedLabel.text = dateFormatter.string(from: date)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         view.endEditing(true)
-        
+    }
+    
+    @IBAction func addNewRun(_ sender: UIBarButtonItem) {
         let date = Date()
         runCollect.createItem(distance: 0, time: 0, date: date, speed: 0, intendedDistance: 0)
         //let end = runCollect.allRuns.endIndex
@@ -89,6 +92,12 @@ class NewRunViewController: UIViewController {
             run.date = Date()
         }
     }
+    
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     
     func texFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditRunViewController: UIViewController {
+class EditRunViewController: UIViewController, UINavigationControllerDelegate  {
     @IBOutlet var distanceField: UITextField!
     @IBOutlet var intendedDistanceField: UITextField!
     @IBOutlet var timeField: UITextField!
@@ -33,7 +33,6 @@ class EditRunViewController: UIViewController {
         speedField.text = numberFormatter.string(from: NSNumber(value: run.speed))
  
         dateField.text = dateFormatter.string(from: run.date)
-        dateCreatedLabel.text = dateFormatter.string(from: run.date)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -90,6 +89,11 @@ class EditRunViewController: UIViewController {
     func texFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     let numberFormatter: NumberFormatter = {

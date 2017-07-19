@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPlanViewController: UIViewController {
+class NewPlanViewController: UIViewController, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet var planName: UITextField!
     @IBOutlet var raceDistance: UITextField!
@@ -27,8 +27,7 @@ class NewPlanViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationItem.title = "Add New Plan"
         navigationItem.rightBarButtonItem = addItem
-        let date = Date()
-        dateCreatedLabel.text = dateFormatter.string(from: date)
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -37,6 +36,12 @@ class NewPlanViewController: UIViewController {
         view.endEditing(true)
         
     }
+    
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     
     func texFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -69,6 +74,8 @@ class NewPlanViewController: UIViewController {
             preconditionFailure("Unexpected Segue Identifier")
         }
     }
+    
+
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()

@@ -17,7 +17,7 @@ class PlanCollection {
         return newPlan
     }
     
-    func moveRun(from fromIndex: Int, to toIndex: Int) {
+    func movePlan(from fromIndex: Int, to toIndex: Int) {
         if fromIndex == toIndex {
             return
         }
