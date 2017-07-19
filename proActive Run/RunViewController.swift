@@ -16,6 +16,11 @@ class RunViewController: UITableViewController {
         return runCollection.allRuns.count
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.rightBarButtonItem = editButtonItem
+    }
+    
     override func tableView(_ tableView: UITableView,
                             moveRowAt sourceIndexPath: IndexPath,
                             to destinationIndexPath: IndexPath) {
