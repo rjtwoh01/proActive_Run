@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Plan: NSObject {
+class Plan: NSObject, NSCoding {
     var planName: String
     var raceDistance: Float
     var planDetails = [Float]() //A 2D array, weeks by days
@@ -65,5 +65,19 @@ class Plan: NSObject {
             planDetails.append(0)
         }
 
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(planName, forKey: "planName")
+        aCoder.encode(raceDistance, forKey: "raceDistance")
+        //aCoder.encode(planDetails, forKey: "planDetails")
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        planName = aDecoder.decodeObject(forKey: "planName") as! String
+        raceDistance = aDecoder.decodeFloat(forKey: "raceDistance")
+        //planDetails = [aDecoder.decodeFloat(forKey: "planDetails")]
+        super.init()
+        planDetails = generatePlan()
     }
 }

@@ -10,7 +10,12 @@ import UIKit
 
 class RunCollection {
     var allRuns = [Run]()
-    //ToDo: Storage
+    
+    let runsArchieveURL: URL = {
+        let documetsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documetsDirectories.first!
+        return documentDirectory.appendingPathComponent("runs.archieve")
+    }()
     
     @discardableResult func createItem(distance: Float, time: Float, date: Date, speed: Float, intendedDistance: Float) -> Run {
         let newRun = Run(distance: distance, time: time, date: date, speed: speed, intendedDistance: intendedDistance)
@@ -37,6 +42,17 @@ class RunCollection {
     func removeRun(_ run: Run) {
         if let index = allRuns.index(of: run) {
             allRuns.remove(at: index)
+        }
+    }
+    
+    func saveChanges() -> Bool {
+        print("Saving items to: \(runsArchieveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allRuns, toFile: runsArchieveURL.path)
+    }
+    
+    init() {
+        if let archivedRuns = NSKeyedUnarchiver.unarchiveObject(withFile: runsArchieveURL.path) as? [Run] {
+            allRuns = archivedRuns
         }
     }
 }

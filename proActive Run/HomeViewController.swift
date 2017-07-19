@@ -51,15 +51,19 @@ class HomeViewController : UIViewController {
         case "newRun"?:
             let newRunController = segue.destination as! NewRunViewController
             newRunController.runCollect = runCollection
+            saveState()
         case "runList"?:
             let runListController = segue.destination as! RunViewController
             runListController.runCollection = runCollection
+            saveState()
         case "newPlan"?:
             let newPlanController = segue.destination as! NewPlanViewController
             newPlanController.planCollection = planCollection
+            saveState()
         case "planList"?:
             let planListController = segue.destination as! PlanListViewController
             planListController.planCollection = planCollection
+            saveState()
         default:
             preconditionFailure("Unexpected segue identifier")
         }
@@ -71,4 +75,22 @@ class HomeViewController : UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    func saveState() {
+        let success = runCollection.saveChanges()
+        if (success) {
+            print("Saved all runs")
+        }
+        else {
+            print("Could not save runs")
+        }
+        
+        let success2 = planCollection.saveChanges()
+        if (success2) {
+            print("Saved all plans")
+        }
+        else {
+            print("Could not save plans")
+        }
+    }
 }

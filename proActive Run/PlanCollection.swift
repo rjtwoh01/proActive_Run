@@ -11,6 +11,12 @@ import UIKit
 class PlanCollection {
     var allPlans = [Plan]()
     
+    let plansArchieveURL: URL = {
+        let documetsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documetsDirectories.first!
+        return documentDirectory.appendingPathComponent("plans.archive")
+    }()
+    
     @discardableResult func createPlan(planName: String, raceDistance: Float) -> Plan {
         let newPlan = Plan(planName: planName, raceDistance: raceDistance)
         allPlans.append(newPlan)
@@ -34,6 +40,17 @@ class PlanCollection {
     func removePlan(_ plan: Plan) {
         if let index = allPlans.index(of: plan) {
             allPlans.remove(at: index)
+        }
+    }
+    
+    func saveChanges() -> Bool {
+        print("Saving items to: \(plansArchieveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allPlans, toFile: plansArchieveURL.path)
+    }
+    
+    init() {
+        if let archievedPlans = NSKeyedUnarchiver.unarchiveObject(withFile: plansArchieveURL.path) as? [Plan] {
+            allPlans = archievedPlans
         }
     }
 }
